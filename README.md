@@ -29,3 +29,12 @@ Ethernet is the name of the most commonly used LAN today. A LAN (Local Area Netw
 * [resource2](https://linux.die.net/man/1/grep)
 * [resource3](https://proft.me/2011/09/17/grep-kollekciya-primerov-ispolzovaniya/)
 * [resource4](http://onedev.net/post/266)
+
+### 03
+#### Identify the MAC address of the Wi-Fi card
+
+A media access control address (MAC address) of a device is a unique identifier assigned to network interface controllers for communications at the data link layer of a network segment. MAC address is like social security number which remains unchanged for a person's life time (here, the device), but IP address is like postal code which can be changed.
+
+##### links
+* [.](https://ru.wikipedia.org/wiki/MAC-адрес)
+* [.](http://osxdaily.com/2014/09/03/list-all-network-hardware-from-the-command-line-in-os-x/)
