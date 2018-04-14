@@ -14,6 +14,8 @@ The -l flag may be used to list all available interfaces on the system, with no 
 
 ##### links
 
-* [good resource](http://xgu.ru/wiki/Сетевой_интерфейс)
-
+* [resource1](http://xgu.ru/wiki/Сетевой_интерфейс)
+* [resource2](https://books.google.com.ua/books?id=MIwu0ljbY2gC&pg=PA190&lpg=PA190&dq=сетевой+интерфейс&source=bl&ots=toUU63tNpl&sig=54mSZV-8mcpl9RAwon90U6x1KOM&hl=ru&sa=X&ved=0ahUKEwjC8bCSi7raAhWB2ywKHYbmCE84ChDoAQhgMAk#v=onepage&q=сетевой%20интерфейс&f=false)
+* [resource3](https://www.computerhope.com/unix/uifconfi.htm)
+* [resource4](https://superuser.com/questions/267660/can-someone-please-explain-ifconfig-output-in-mac-os-x)
 
