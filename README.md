@@ -19,3 +19,13 @@ The -l flag may be used to list all available interfaces on the system, with no 
 * [resource3](https://www.computerhope.com/unix/uifconfi.htm)
 * [resource4](https://superuser.com/questions/267660/can-someone-please-explain-ifconfig-output-in-mac-os-x)
 
+### 02
+#### Identify the IP address of the Ethernet interface
+
+Ethernet is the name of the most commonly used LAN today. A LAN (Local Area Network) is a network of computers that covers a small area like a room, an office, a building or a campus. It is used in contrast with WAN (wide area network) which spans for much larger geographical areas. Ethernet is a network protocol that controls how data is transmitted over a LAN. Technically it is referred to as the IEEE 802.3 protocol.
+
+##### links
+* [resource1](https://www.cyberciti.biz/faq/how-to-find-out-the-ip-address-assigned-to-eth0-and-display-ip-only/)
+* [resource2](https://linux.die.net/man/1/grep)
+* [resource3](https://proft.me/2011/09/17/grep-kollekciya-primerov-ispolzovaniya/)
+* [resource4](http://onedev.net/post/266)
