@@ -14,10 +14,10 @@ The -l flag may be used to list all available interfaces on the system, with no 
 
 ##### links
 
-* [resource1](http://xgu.ru/wiki/Сетевой_интерфейс)
-* [resource2](https://books.google.com.ua/books?id=MIwu0ljbY2gC&pg=PA190&lpg=PA190&dq=сетевой+интерфейс&source=bl&ots=toUU63tNpl&sig=54mSZV-8mcpl9RAwon90U6x1KOM&hl=ru&sa=X&ved=0ahUKEwjC8bCSi7raAhWB2ywKHYbmCE84ChDoAQhgMAk#v=onepage&q=сетевой%20интерфейс&f=false)
-* [resource3](https://www.computerhope.com/unix/uifconfi.htm)
-* [resource4](https://superuser.com/questions/267660/can-someone-please-explain-ifconfig-output-in-mac-os-x)
+* [..](http://xgu.ru/wiki/Сетевой_интерфейс)
+* [..](https://books.google.com.ua/books?id=MIwu0ljbY2gC&pg=PA190&lpg=PA190&dq=сетевой+интерфейс&source=bl&ots=toUU63tNpl&sig=54mSZV-8mcpl9RAwon90U6x1KOM&hl=ru&sa=X&ved=0ahUKEwjC8bCSi7raAhWB2ywKHYbmCE84ChDoAQhgMAk#v=onepage&q=сетевой%20интерфейс&f=false)
+* [..](https://www.computerhope.com/unix/uifconfi.htm)
+* [..](https://superuser.com/questions/267660/can-someone-please-explain-ifconfig-output-in-mac-os-x)
 
 ### 02
 #### Identify the IP address of the Ethernet interface
@@ -25,10 +25,10 @@ The -l flag may be used to list all available interfaces on the system, with no 
 Ethernet is the name of the most commonly used LAN today. A LAN (Local Area Network) is a network of computers that covers a small area like a room, an office, a building or a campus. It is used in contrast with WAN (wide area network) which spans for much larger geographical areas. Ethernet is a network protocol that controls how data is transmitted over a LAN. Technically it is referred to as the IEEE 802.3 protocol.
 
 ##### links
-* [resource1](https://www.cyberciti.biz/faq/how-to-find-out-the-ip-address-assigned-to-eth0-and-display-ip-only/)
-* [resource2](https://linux.die.net/man/1/grep)
-* [resource3](https://proft.me/2011/09/17/grep-kollekciya-primerov-ispolzovaniya/)
-* [resource4](http://onedev.net/post/266)
+* [..](https://www.cyberciti.biz/faq/how-to-find-out-the-ip-address-assigned-to-eth0-and-display-ip-only/)
+* [..](https://linux.die.net/man/1/grep)
+* [..](https://proft.me/2011/09/17/grep-kollekciya-primerov-ispolzovaniya/)
+* [..](http://onedev.net/post/266)
 
 ### 03
 #### Identify the MAC address of the Wi-Fi card
@@ -36,5 +36,5 @@ Ethernet is the name of the most commonly used LAN today. A LAN (Local Area Netw
 A media access control address (MAC address) of a device is a unique identifier assigned to network interface controllers for communications at the data link layer of a network segment. MAC address is like social security number which remains unchanged for a person's life time (here, the device), but IP address is like postal code which can be changed.
 
 ##### links
-* [.](https://ru.wikipedia.org/wiki/MAC-адрес)
-* [.](http://osxdaily.com/2014/09/03/list-all-network-hardware-from-the-command-line-in-os-x/)
+* [..](https://ru.wikipedia.org/wiki/MAC-адрес)
+* [..](http://osxdaily.com/2014/09/03/list-all-network-hardware-from-the-command-line-in-os-x/)
