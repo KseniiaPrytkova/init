@@ -106,17 +106,27 @@ Traceroute is a utility that records the route (the specific gateway computers a
 ### 11
 #### Use the output of the previous command to find the name and IP address of the device that makes the link between you (local network) and the outside world `[>man traceroute]`
 
+this device is a server in my school
+
+### 12
+#### Check that the server with the 10.51.1.253 IP address is reachable from your computer. `[>man ping]`
+
+### 13
+#### Check that the server with the 10.51.1.253 IP address is reachable from your computer. `[>man ]`
+
+### 14
+#### Use the Reverse DNS to find out the name of the server linked to the 10.51.1.81 IP address `[>man ]`
+
+### 15
+#### What file contains the local DNS entries? `[>man ]`
+
+### 16
+#### Make the intra.42.fr address reroute to 46.19.122.85 `[>man ]`
 
 
 
 
 
-
-
-
-
-
-12. man ping
 13. man nslookup && google it: server type
 14. man dig && man host
 15. google it: file hosts
