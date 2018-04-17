@@ -60,3 +60,16 @@ The `netstat` command symbolically displays the contents of various network-rela
 
 ### 05
 #### Identify the IP address of the DNS that responds to the following url: slash16.org `[>man nslookup]`
+
+The Domain Name System (DNS) is a hierarchical decentralized naming system for computers, services, or other resources connected to the Internet or a private network. It associates various information with domain names assigned to each of the participating entities. Most prominently, it translates more readily memorized domain names to the numerical IP addresses needed for locating and identifying computer services and devices with the underlying network protocols.
+
+##### links
+* [:rocket:](https://habrahabr.ru/post/303446/)
+
+### 06
+#### Get the complete path of the file that contains the IP address of the DNS server you’re using `[>google->man->nameserver unix]`
+
+`resolv.conf` is the name of a computer file used in various operating systems to configure the system's Domain Name System (DNS) resolver (the client side of the DNS is called a DNS resolver). The file is a plain-text file usually created by the network administrator or by applications that manage the configuration tasks of the system. The resolvconf program is one such program on FreeBSD or other Unix machines which manages the resolv.conf file.
+
+##### links
+* [:rocket:](https://forums.macrumors.com/threads/how-do-i-find-out-my-dns-server-ip.466158/)
