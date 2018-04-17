@@ -67,9 +67,20 @@ The Domain Name System (DNS) is a hierarchical decentralized naming system for c
 * [:rocket:](https://habrahabr.ru/post/303446/)
 
 ### 06
-#### Get the complete path of the file that contains the IP address of the DNS server you’re using `[>google->man->nameserver unix]`
+#### Get the complete path of the file that contains the IP address of the DNS server you’re using `[>google man->nameserver unix]`
 
 `resolv.conf` is the name of a computer file used in various operating systems to configure the system's Domain Name System (DNS) resolver (the client side of the DNS is called a DNS resolver). The file is a plain-text file usually created by the network administrator or by applications that manage the configuration tasks of the system. The resolvconf program is one such program on FreeBSD or other Unix machines which manages the resolv.conf file.
 
 ##### links
-* [:rocket:](https://forums.macrumors.com/threads/how-do-i-find-out-my-dns-server-ip.466158/)
+* [:rocket:](https://forums.macrumors.com/threads/how-do-i-find-out-my-dns-server-ip.466158/) - Давайте уже разберемся в DNS, Хабрахабр
+* [:rocket:](https://habrahabr.ru/company/ruvds/blog/328346/) - очень хорошая статья о Bash-скриптахб Хабрахабр
+
+### 07
+#### Query an external DNS server on the slash16.org domain name (ie. : google 8.8.8.8) `[>man dig]`
+
+##### links
+* [:rocket:](https://habrahabr.ru/post/137587/) - DNS сервер BIND (теория)б Хабрахабр
+* [:rocket:](https://en.wikipedia.org/wiki/Google_Public_DNS) - Google Public DNS
+* [:rocket:](https://developers.google.com/speed/public-dns/docs/using) - Configure your network settings to use Google Public DNS
+* [:rocket:](http://droptips.com/using-dig-to-query-a-specific-dns-server-name-server-directly-linux-bsd-osx) - Using dig to Query a Specific DNS Server (Name Server) Directly (Linux, BSD, OSX)
+
