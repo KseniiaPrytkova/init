@@ -65,6 +65,7 @@ The Domain Name System (DNS) is a hierarchical decentralized naming system for c
 
 ##### links
 * [:rocket:](https://habrahabr.ru/post/303446/)
+* [:rocket:](http://jack.kiev.ua/docs/slackbook/basic-network-commands-dns.html)
 
 ### 06
 #### Get the complete path of the file that contains the IP address of the DNS server you’re using `[>google man->nameserver unix]`
@@ -90,6 +91,13 @@ The Domain Name System (DNS) is a hierarchical decentralized naming system for c
 
 ohhhh, it's Amazon!
 
+### 09
+#### Find the external IP of 42.fr `[>man host]` `[>man dig]`
+
+I have two IP addresses, an Internal IP address (Private) and an external IP address (Public). The `external IP address` or Public IP address is the IP address of the router interface that is connected to the Internet. `Internal Addresses` are also called Private addresses as they are restricted to private networks. [:rocket:](http://www.steves-internet-guide.com/internal-external-ip-addresses/)
+
+### 10
+#### Identify the network devices between your computer and the slash16.org domain
 
 
 
@@ -103,12 +111,6 @@ ohhhh, it's Amazon!
 
 
 
-
-
-
-
-
-09. man host or man dig
 10. man traceroute
 11. man traceroute
 12. man ping

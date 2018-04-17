@@ -1,0 +1,23 @@
+V.1 >dig 42.fr +short
+163.172.250.12
+163.172.250.11
+163.172.250.13
+
+V.2 >nslookup 42.fr 8.8.8.8
+Server:		8.8.8.8
+Address:	8.8.8.8#53
+
+Non-authoritative answer:
+Name:	42.fr
+Address: 163.172.250.12
+Name:	42.fr
+Address: 163.172.250.11
+Name:	42.fr
+Address: 163.172.250.13
+
+V.3 >host 42.fr
+42.fr has address 163.172.250.13
+42.fr has address 163.172.250.12
+42.fr has address 163.172.250.11
+42.fr mail is handled by 10 mx01.42.fr.
+42.fr mail is handled by 10 mx02.42.fr.
