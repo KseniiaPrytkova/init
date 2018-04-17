@@ -1,4 +1,9 @@
 #resolv.conf is the name of a computer file used in various operating systems to configure the system's DNS resolver;
+
 ##to view the file: >cat /etc/resolv.conf;
-### we are only interested in the last line of this file; >cat /etc/resolv.conf | grep nameserver gives me the information, that name of DNS server i use is 'nameserver' and it's the IP address is 10.51.1.253;
+
+### we are only interested in the last line of this file;
+>cat /etc/resolv.conf | grep nameserver 
+gives me the information, that name of DNS server i use is 'nameserver' and it's the IP address is 10.51.1.253;
+
 #### >cat /etc/resolv.conf | grep nameserver | cut -d ' ' -f 2 (here is solely IP);
