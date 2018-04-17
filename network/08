@@ -1,0 +1,6 @@
+> nslookup slash16.org (geting a list of DNS and their IP of slash16.org)
+and on this stage i found 2 options:
+[1] > whois 'write_ip_here' (we can apply to each IP)
+[2] > nslookup 'write_ip_here' | awk ' /'nameserver'/ {print $0;} '
+
+Сonclusion: my deduction tells me that the provider of slash16.org is Amazon
