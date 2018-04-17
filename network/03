@@ -1,1 +1,1 @@
-ifconfig en1 | grep ether | cut -d ' ' -f 2 | grep -v autoselect
+ifconfig en1 | grep 'ether | cut -d ' ' -f 2 | grep -v autoselect

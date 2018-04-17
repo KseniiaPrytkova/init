@@ -40,7 +40,7 @@ A media access control address (MAC address) of a device is a unique identifier 
 * [:rocket:](http://osxdaily.com/2014/09/03/list-all-network-hardware-from-the-command-line-in-os-x/)
 
 ### 04
-#### Identify the default gateway in the routing table [>man netstat]
+#### Identify the default gateway in the routing table `[>man netstat]`
 
 A `default gateway` is the node in a computer network using the Internet Protocol Suite that serves as the forwarding host (router) to other networks when no other route specification matches the destination IP address of a packet.
 
@@ -48,10 +48,15 @@ In computer networking a `routing table`, or routing information base (RIB), is 
 
 `Default route in routing table`: the entry corresponding to the default gateway configuration is a network destination of 0.0.0.0 with a network mask (netmask) of 0.0.0.0. Any destination IP address joined with 0.0.0.0 by a logical AND results in 0.0.0.0. Therefore, for any IP address, the default route produces a match. If the default route is chosen because no better routes were found, the IP packet is forwarded to the IP address in the Gateway column using the interface corresponding to the IP address in the Interface column.
 
-The `netstat` command symbolically displays the contents of various network-related data structures. `-r` : show the routing tables.  Use with -a to show protocol-cloned routes.  When -s is also present, show routing statistics instead.  When -l is also present, netstat assumes more columns are there and the maximum transmission unit (mtu) are also displayed.
+The `netstat` command symbolically displays the contents of various network-related data structures. `-r` : show the routing tables.  Use with -a to show protocol-cloned routes.  When -s is also present, show routing statistics instead.  When -l is also present, netstat assumes more columns are there and the maximum transmission unit (mtu) are also displayed. 
+
 `-n` :show network addresses as numbers (normally netstat interprets addresses and attempts to display them symbolically). This option may be used with any of the display formats.
 
 
 ##### links
 * [:rocket:](https://ru.wikipedia.org/wiki/Таблица_маршрутизации)
 * [:rocket:](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-2000-server/cc958823(v=technet.10))
+* [:rocket:](http://rus-linux.net/MyLDP/consol/awk.html) - about awk
+
+### 05
+#### Identify the IP address of the DNS that responds to the following url: slash16.org `[>man nslookup]`
