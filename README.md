@@ -97,7 +97,14 @@ ohhhh, it's Amazon!
 I have two IP addresses, an Internal IP address (Private) and an external IP address (Public). The `external IP address` or Public IP address is the IP address of the router interface that is connected to the Internet. `Internal Addresses` are also called Private addresses as they are restricted to private networks. [:rocket:](http://www.steves-internet-guide.com/internal-external-ip-addresses/)
 
 ### 10
-#### Identify the network devices between your computer and the slash16.org domain
+#### Identify the network devices between your computer and the slash16.org domain `[>man traceroute]`
+
+Traceroute is a utility that records the route (the specific gateway computers at each hop) through the Internet between your computer and a specified destination computer. It also calculates and displays the amount of time each hop took. Traceroute is a handy tool both for understanding where problems are in the Internet network and for getting a detailed sense of the Internet itself.
+
+* [:rocket:](https://ru.wikipedia.org/wiki/Канал_связи) - Канал связи
+
+### 11
+#### Use the output of the previous command to find the name and IP address of the device that makes the link between you (local network) and the outside world `[>man traceroute]`
 
 
 
@@ -109,10 +116,6 @@ I have two IP addresses, an Internal IP address (Private) and an external IP add
 
 
 
-
-
-10. man traceroute
-11. man traceroute
 12. man ping
 13. man nslookup && google it: server type
 14. man dig && man host
