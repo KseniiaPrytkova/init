@@ -14,10 +14,10 @@ The -l flag may be used to list all available interfaces on the system, with no 
 
 ##### links
 
-- [:rocket:](http://xgu.ru/wiki/Сетевой_интерфейс)
-- [..](https://books.google.com.ua/books?id=MIwu0ljbY2gC&pg=PA190&lpg=PA190&dq=сетевой+интерфейс&source=bl&ots=toUU63tNpl&sig=54mSZV-8mcpl9RAwon90U6x1KOM&hl=ru&sa=X&ved=0ahUKEwjC8bCSi7raAhWB2ywKHYbmCE84ChDoAQhgMAk#v=onepage&q=сетевой%20интерфейс&f=false)
-- [..](https://www.computerhope.com/unix/uifconfi.htm)
-- [..](https://superuser.com/questions/267660/can-someone-please-explain-ifconfig-output-in-mac-os-x)
+* [:rocket:](http://xgu.ru/wiki/Сетевой_интерфейс)
+* [:rocket:](https://books.google.com.ua/books?id=MIwu0ljbY2gC&pg=PA190&lpg=PA190&dq=сетевой+интерфейс&source=bl&ots=toUU63tNpl&sig=54mSZV-8mcpl9RAwon90U6x1KOM&hl=ru&sa=X&ved=0ahUKEwjC8bCSi7raAhWB2ywKHYbmCE84ChDoAQhgMAk#v=onepage&q=сетевой%20интерфейс&f=false)
+* [:rocket:](https://www.computerhope.com/unix/uifconfi.htm)
+* [:rocket:](https://superuser.com/questions/267660/can-someone-please-explain-ifconfig-output-in-mac-os-x)
 
 ### 02
 #### Identify the IP address of the Ethernet interface `[>man ifconfig]`
@@ -25,10 +25,10 @@ The -l flag may be used to list all available interfaces on the system, with no 
 `Ethernet` is the name of the most commonly used LAN today. A LAN (Local Area Network) is a network of computers that covers a small area like a room, an office, a building or a campus. It is used in contrast with WAN (wide area network) which spans for much larger geographical areas. Ethernet is a network protocol that controls how data is transmitted over a LAN. Technically it is referred to as the IEEE 802.3 protocol.
 
 ##### links
-* [..](https://www.cyberciti.biz/faq/how-to-find-out-the-ip-address-assigned-to-eth0-and-display-ip-only/)
-* [..](https://linux.die.net/man/1/grep)
-* [..](https://proft.me/2011/09/17/grep-kollekciya-primerov-ispolzovaniya/)
-* [..](http://onedev.net/post/266)
+* [:rocket:](https://www.cyberciti.biz/faq/how-to-find-out-the-ip-address-assigned-to-eth0-and-display-ip-only/)
+* [:rocket:](https://linux.die.net/man/1/grep)
+* [:rocket:](https://proft.me/2011/09/17/grep-kollekciya-primerov-ispolzovaniya/)
+* [:rocket:](http://onedev.net/post/266)
 
 ### 03
 #### Identify the MAC address of the Wi-Fi card `[>man ifconfig]`
@@ -36,8 +36,8 @@ The -l flag may be used to list all available interfaces on the system, with no 
 A media access control address (MAC address) of a device is a unique identifier assigned to network interface controllers for communications at the data link layer of a network segment. **MAC address** is like **social security number** which remains unchanged for a person's life time (here, the device), but **IP address** is like **postal code** which can be changed.
 
 ##### links
-* [..](https://ru.wikipedia.org/wiki/MAC-адрес)
-* [..](http://osxdaily.com/2014/09/03/list-all-network-hardware-from-the-command-line-in-os-x/)
+* [:rocket:](https://ru.wikipedia.org/wiki/MAC-адрес)
+* [:rocket:](http://osxdaily.com/2014/09/03/list-all-network-hardware-from-the-command-line-in-os-x/)
 
 ### 04
 #### Identify the default gateway in the routing table [>man netstat]
@@ -48,9 +48,10 @@ In computer networking a `routing table`, or routing information base (RIB), is 
 
 `Default route in routing table`: the entry corresponding to the default gateway configuration is a network destination of 0.0.0.0 with a network mask (netmask) of 0.0.0.0. Any destination IP address joined with 0.0.0.0 by a logical AND results in 0.0.0.0. Therefore, for any IP address, the default route produces a match. If the default route is chosen because no better routes were found, the IP packet is forwarded to the IP address in the Gateway column using the interface corresponding to the IP address in the Interface column.
 
-The `netstat` command symbolically displays the contents of various network-related data structures. `-r` : show the routing tables.  Use with -a to show protocol-cloned routes.  When -s is also present, show routing statistics instead.  When -l is also present, netstat assumes more columns are there and the maximum transmission unit (mtu) are also displayed. `-n` :show network addresses as numbers (normally netstat interprets addresses and attempts to display them symbolically). This option may be used with any of the display formats.
+The `netstat` command symbolically displays the contents of various network-related data structures. `-r` : show the routing tables.  Use with -a to show protocol-cloned routes.  When -s is also present, show routing statistics instead.  When -l is also present, netstat assumes more columns are there and the maximum transmission unit (mtu) are also displayed.
+`-n` :show network addresses as numbers (normally netstat interprets addresses and attempts to display them symbolically). This option may be used with any of the display formats.
 
 
 ##### links
-* [..](https://ru.wikipedia.org/wiki/Таблица_маршрутизации)
-* [..](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-2000-server/cc958823(v=technet.10))
+* [:rocket:](https://ru.wikipedia.org/wiki/Таблица_маршрутизации)
+* [:rocket:](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-2000-server/cc958823(v=technet.10))
