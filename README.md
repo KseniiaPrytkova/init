@@ -123,6 +123,12 @@ this device is a server in my school
 ### 16
 #### Make the intra.42.fr address reroute to 46.19.122.85 `[>man ]`
 
+## V.2 System
+
+First u should download Debian ISO image from [here](https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/). I used `debian-live-9.3.0-amd64-cinnamon.iso` version. Then run it on virtualizer, u used VirtualBox. (in case of my school everything should be done in /tmp folder, otherwise there will be problems with memory; also i ran ISO image from flash drive).
+
+### 01
+#### In what file can you find the installed version of your Debian?
 
 
 

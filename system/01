@@ -1,0 +1,5 @@
+v.1: >cat /etc/issue
+v.2: >cat /etc/debian_version
+v.3: >cat /etc/os-release
+
+So, there are couple of such files, u can find all of them in /etc folder.
