@@ -132,7 +132,10 @@ First u should download Debian ISO image from [here](https://cdimage.debian.org/
 
 The answer is [here](https://linuxconfig.org/check-what-debian-version-you-are-running-on-your-linux-system).
 
+### 02
+#### What command can you use to rename your system?
 
+To find the current computer name type `$ hostname`. To change the name of the system u need to Become a root user: `sudo -s` or `su -`.[:mag:](https://www.cyberciti.biz/faq/debian-change-hostname-permanently/)
 
 13. man nslookup && google it: server type
 14. man dig && man host
