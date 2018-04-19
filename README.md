@@ -130,7 +130,7 @@ First u should download Debian ISO image from [here](https://cdimage.debian.org/
 ### 01
 #### In what file can you find the installed version of your Debian?
 
-the answer is [here](https://linuxconfig.org/check-what-debian-version-you-are-running-on-your-linux-system).
+The answer is [here](https://linuxconfig.org/check-what-debian-version-you-are-running-on-your-linux-system).
 
 
 
