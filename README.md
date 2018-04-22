@@ -195,3 +195,11 @@ Here is the answer [:mag:](https://serverfault.com/questions/360296/see-all-logg
 
 * [:mag:](https://www.thegeekstuff.com/2009/03/4-ways-to-identify-who-is-logged-in-on-your-linux-system) - 4 Ways to Identify Who is Logged-In on Your Linux System
 * [:mag:](https://www.computerhope.com/unix/uwho.htm) - Linux who command
+
+### 10
+#### Name the command that lists the partition tables of external devices?
+
+A partition ([GUID Partition Table](https://ru.wikipedia.org/wiki/Таблица_разделов_GUID)) is a fixed-size subset of a disk drive which is treated as a unit by the operating system.[1] A partition table is a table maintained on disk by the operating system describing the partitions on that disk. Partitions can be created, resized, or deleted. This is called disk partitioning. It is usually done during the installation of an operating system, however it is sometimes possible to make changes to the partitions even after the operating system has been installed.
+
+* [:mag:](http://www.lostsaloon.com/technology/how-to-list-disks-in-linux/) - how to list all hard disks in linux from command line
+* [:mag:](https://www.cyberciti.biz/faq/linux-viewing-drive-partitions-with-fdisk-parted/) - Linux View Hard Drive Partitions with fdisk and parted commands
