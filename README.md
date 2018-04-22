@@ -215,3 +215,8 @@ A partition ([GUID Partition Table](https://ru.wikipedia.org/wiki/Таблица
 The command du "summarizes disk usage of each FILE, recursively for directories," e.g.: `du -hs /path/to/directory`.
 * `-h` is to get the numbers "human readable", e.g. get 140M instead of 143260 (size in KBytes);
 * `-s` is for summary (otherwise you'll get not only the size of the folder but also for everything in the folder separately).[:mag:](https://askubuntu.com/questions/1224/how-do-i-determine-the-total-size-of-a-directory-folder-from-the-command-line)
+
+### 13
+#### Name the command that find currently running processes. [ [>man ps](http://www.manpages.info/linux/ps.1.html)]
+
+[How to Manage Processes from the Linux Terminal: 10 Commands You Need to Know](https://www.howtogeek.com/107217/how-to-manage-processes-from-the-linux-terminal-10-commands-you-need-to-know/)
