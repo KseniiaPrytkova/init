@@ -203,3 +203,8 @@ A partition ([GUID Partition Table](https://ru.wikipedia.org/wiki/Таблица
 
 * [:mag:](http://www.lostsaloon.com/technology/how-to-list-disks-in-linux/) - how to list all hard disks in linux from command line
 * [:mag:](https://www.cyberciti.biz/faq/linux-viewing-drive-partitions-with-fdisk-parted/) - Linux View Hard Drive Partitions with fdisk and parted commands
+
+### 11
+#### Name the command that displays the available space left on the system?
+
+[Linux Check Disk Space Command](https://www.cyberciti.biz/faq/linux-check-disk-space-command/).
