@@ -1,0 +1,7 @@
+1. First u should generate an RSA key pair on your local computer:
+$ ssh-keygen
+2. There will be some questions next, feel free to press ENTER.
+3.This procedure has generated an RSA SSH key pair, located in the .ssh hidden directory
+within your user s home directory. These files are:
+1) ~/.ssh/id_rsa: The private key. DO NOT SHARE THIS FILE!
+2) ~/.ssh/id_rsa.pub: The associated public key. This can be shared freely without consequence.

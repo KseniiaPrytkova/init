@@ -180,3 +180,11 @@ Exhaustive answer is here: [:mag:](https://www.cyberciti.biz/faq/howto-start-sto
 * [:mag:](https://www.ssh.com/ssh/sshd/) - about SSHD process.
 * [:mag:](https://habrahabr.ru/post/331348/) - Магия SSH, Хабрахабр
 * [:mag:](https://stackoverflow.com/questions/6867669/getting-pid-of-sshd) - Getting PID of sshd
+
+### 08
+#### What file contains the RSA keys that are authorized to connect via SSH?
+
+`RSA key` is a private key based on RSA algorithm [RSA is one of the first public-key cryptosystems and is widely used for secure data transmission.](https://ru.wikipedia.org/wiki/RSA). Private Key is used for authentication and a symmetric key exchange during establishment of an SSL/TLS session. [:mag:](https://www.namecheap.com/support/knowledgebase/article.aspx/798/67/what-is-an-rsa-key-used-for)
+
+[:mag:](https://www.digitalocean.com/community/tutorials/ssh-essentials-working-with-ssh-servers-clients-and-keys) -  SSH Essentials: Working with SSH Servers, Clients, and Keys
+
