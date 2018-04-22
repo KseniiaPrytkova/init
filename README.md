@@ -186,5 +186,12 @@ Exhaustive answer is here: [:mag:](https://www.cyberciti.biz/faq/howto-start-sto
 
 `RSA key` is a private key based on RSA algorithm [RSA is one of the first public-key cryptosystems and is widely used for secure data transmission.](https://ru.wikipedia.org/wiki/RSA). Private Key is used for authentication and a symmetric key exchange during establishment of an SSL/TLS session. [:mag:](https://www.namecheap.com/support/knowledgebase/article.aspx/798/67/what-is-an-rsa-key-used-for)
 
-[:mag:](https://www.digitalocean.com/community/tutorials/ssh-essentials-working-with-ssh-servers-clients-and-keys) -  SSH Essentials: Working with SSH Servers, Clients, and Keys
+[:mag:](https://www.digitalocean.com/community/tutorials/ssh-essentials-working-with-ssh-servers-clients-and-keys) - SSH Essentials: Working with SSH Servers, Clients, and Keys
 
+### 09
+#### What command lets you know who is connected to the System?
+
+Here is the answer [:mag:](https://serverfault.com/questions/360296/see-all-logged-in-users-on-debian-server).
+
+* [:mag:](https://www.thegeekstuff.com/2009/03/4-ways-to-identify-who-is-logged-in-on-your-linux-system) - 4 Ways to Identify Who is Logged-In on Your Linux System
+* [:mag:](https://www.computerhope.com/unix/uwho.htm) - Linux who command

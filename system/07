@@ -1,4 +1,5 @@
 cat /var/run/sshd.pid
+
 # OR:
 # The command [$ ps axjf] can be used to display the process tree on Linux,
 # and it is easy to see which one is the parent process, so:

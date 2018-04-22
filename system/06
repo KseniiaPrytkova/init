@@ -1,5 +1,7 @@
 sudo /etc/init.d/ssh restart
-# $ sudo service ssh status
 
+# OR:
+# $ sudo service ssh status
+# OR:
 # for systemd based Ubuntu Linux 16.04 LTS or above server:
 # $ sudo systemctl status ssh
