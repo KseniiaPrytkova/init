@@ -1,1 +1,3 @@
 sudo systemctl status ssh
+# for systemd based Ubuntu Linux 16.04 LTS or above server, it works like
+# < sudo service ssh status

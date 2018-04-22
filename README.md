@@ -163,5 +163,12 @@ SSH stands for Secure Shell and is `a cryptographic network protocol` for secure
 * [:mag:](http://help.ubuntu.ru/wiki/ssh) - SSH
 * [:mag:](https://linuxhint.com/enable-ssh-server-debian/) - Enable SSH Server on Debian (How to Enable SSH Server for Remote Login on Debian 9).
 
+### 06
+#### Name the command that reboots the SSH service.
+
+Exhaustive answer is here: [:mag:](https://www.cyberciti.biz/faq/howto-start-stop-ssh-server/).
+
+[:mag:](https://www.cyberciti.biz/faq/find-linux-distribution-name-version-number/) - HowTo: Find Out My Linux Distribution Name and Version
+
 
 
