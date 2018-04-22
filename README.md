@@ -114,14 +114,22 @@ this device is a server in my school
 ### 13
 #### Check that the server with the 10.51.1.253 IP address is reachable from your computer. `[>man ]`
 
+13. man nslookup && google it: server type
+
 ### 14
 #### Use the Reverse DNS to find out the name of the server linked to the 10.51.1.81 IP address `[>man ]`
+
+14. man dig && man host
 
 ### 15
 #### What file contains the local DNS entries? `[>man ]`
 
+15. google it: file hosts
+
 ### 16
 #### Make the intra.42.fr address reroute to 46.19.122.85 `[>man ]`
+
+16. google it: file hosts
 
 ## V.2 System
 
@@ -142,8 +150,12 @@ To find the current computer name type `$ hostname`. To change the name of the s
 
 Everything about it [:mag:](https://debianworld.ru/articles/izmenenie-hostname-v-ubuntu-debian/index.html).
 
-13. man nslookup && google it: server type
-14. man dig && man host
-15. google it: file hosts
-16. google it: file hosts
+### 04
+#### What command gives you the time since your system was last booted?
+
+[](https://www.cyberciti.biz/tips/linux-last-reboot-time-and-date-find-out.html) - Linux Find Out Last System Reboot Time and Date Command
+
+
+
+
 
