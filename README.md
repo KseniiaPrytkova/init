@@ -137,6 +137,11 @@ The answer is [here](https://linuxconfig.org/check-what-debian-version-you-are-r
 
 To find the current computer name type `$ hostname`. To change the name of the system u need to Become a root user: `sudo -s` or `su -`.[:mag:](https://www.cyberciti.biz/faq/debian-change-hostname-permanently/)
 
+### 03
+#### What file has to be modified to make it permanent?
+
+Everything about it [:mag:](https://debianworld.ru/articles/izmenenie-hostname-v-ubuntu-debian/index.html).
+
 13. man nslookup && google it: server type
 14. man dig && man host
 15. google it: file hosts
