@@ -170,5 +170,13 @@ Exhaustive answer is here: [:mag:](https://www.cyberciti.biz/faq/howto-start-sto
 
 [:mag:](https://www.cyberciti.biz/faq/find-linux-distribution-name-version-number/) - HowTo: Find Out My Linux Distribution Name and Version
 
+### 07
+#### Figure out the PID of the SSHD service.
 
+`PID` - process ID of a running terminal program.
 
+`SSHD` is the [OpenSSH](https://ru.wikipedia.org/wiki/OpenSSH) server process. It listens to incoming connections using the SSH protocol and acts as the server for the protocol. It handles user authentication, encryption, terminal connections, file transfers, and tunneling.
+
+* [:mag:](https://www.ssh.com/ssh/sshd/) - about SSHD process.
+* [:mag:](https://habrahabr.ru/post/331348/) - Магия SSH, Хабрахабр
+* [:mag:](https://stackoverflow.com/questions/6867669/getting-pid-of-sshd) - Getting PID of sshd
