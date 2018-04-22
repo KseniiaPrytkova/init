@@ -153,15 +153,15 @@ Everything about it [:mag:](https://debianworld.ru/articles/izmenenie-hostname-v
 ### 04
 #### What command gives you the time since your system was last booted?
 
-[:mag::mag:](https://www.cyberciti.biz/tips/linux-last-reboot-time-and-date-find-out.html) - Linux Find Out Last System Reboot Time and Date Command
+[:mag:](https://www.cyberciti.biz/tips/linux-last-reboot-time-and-date-find-out.html) - Linux Find Out Last System Reboot Time and Date Command
 
 ### 05
 #### Name the command that determines the state of the SSH service.
 
 SSH stands for Secure Shell and is `a cryptographic network protocol` for secure remote login and other secure network services over an insecure network [:mag:](https://wiki.debian.org/SSH). The best known example application is for remote login to computer systems by users.
-[:mag:](https://en.wikipedia.org/wiki/Secure_Shell) - Secure Shell
-[:mag:](http://help.ubuntu.ru/wiki/ssh) - SSH
-[:mag:](https://linuxhint.com/enable-ssh-server-debian/) - Enable SSH Server on Debian (How to Enable SSH Server for Remote Login on Debian 9).
+* [:mag:](https://en.wikipedia.org/wiki/Secure_Shell) - Secure Shell
+* [:mag:](http://help.ubuntu.ru/wiki/ssh) - SSH
+* [:mag:](https://linuxhint.com/enable-ssh-server-debian/) - Enable SSH Server on Debian (How to Enable SSH Server for Remote Login on Debian 9).
 
 
 
