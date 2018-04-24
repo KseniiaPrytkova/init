@@ -1,1 +1,3 @@
+sudo tail -f /var/log/syslog &
+OR:
 'tail -f /var/log/syslog'&
