@@ -265,3 +265,8 @@ You can as well run a process directly from the background using the ampersand, 
 #### With the previous command, authorize only IP addresses from 10.0.0.0/8 to connect to your system.
 
 [iptables configuration - ssh connection only from a remote network](https://unix.stackexchange.com/questions/207110/iptables-configuration-ssh-connection-only-from-a-remote-network)
+
+### 19
+#### With the previous command, forbid all others.
+
+[How to block all ports except..](https://superuser.com/questions/769814/how-to-block-all-ports-except-80-443-with-iptables)

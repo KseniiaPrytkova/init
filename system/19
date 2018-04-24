@@ -1,0 +1,2 @@
+# Set the default policy of the INPUT chain to DROP
+iptables -P INPUT DROP
