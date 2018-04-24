@@ -260,3 +260,8 @@ You can as well run a process directly from the background using the ampersand, 
 
 * [firewall — что это такое и зачем он нужен?](http://www.oldnix.org/firewall-description/)
 * [DebianFirewall](https://wiki.debian.org/DebianFirewall)
+
+### 18
+#### With the previous command, authorize only IP addresses from 10.0.0.0/8 to connect to your system.
+
+[iptables configuration - ssh connection only from a remote network](https://unix.stackexchange.com/questions/207110/iptables-configuration-ssh-connection-only-from-a-remote-network)
