@@ -284,3 +284,9 @@ The /etc/security/passwd file is an ASCII file that contains stanzas with passwo
 The Linux user login management (/etc/passwd and /etc/shadow files)](https://www.ibm.com/developerworks/community/blogs/58e72888-6340-46ac-b488-d31aa4058e9c/entry/the_linux_user_login_management_etc_passwd_and_etc_shadow_files19?lang=en)
 
 * [Understanding /etc/passwd File Format !!!](https://www.cyberciti.biz/faq/understanding-etcpasswd-file-format/)
+
+### 02
+#### 
+
+### 03
+#### Write a script which displays the list of files from the folder given as parameter, sorted by size.
