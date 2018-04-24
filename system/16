@@ -1,0 +1,1 @@
+The software utility cron is a time-based job scheduler in Unix-like computer operating systems. Cron is driven by a crontab (cron table) file, a configuration file that specifies shell commands to run periodically on a given schedule.

@@ -243,3 +243,11 @@ You can as well run a process directly from the background using the ampersand, 
 #### Find the command that kills the background command’s process.
 
 [How to terminate a background process?](https://unix.stackexchange.com/questions/104821/how-to-terminate-a-background-process)
+
+### 16
+#### Find the service which makes it possible to run specific tasks following a regular schedule.
+
+ Linux has a great program for this called `cron`. It allows tasks to be automatically run in the background at regular intervals. You could also use it to automatically create backups, synchronize files, schedule updates, and much more. Welcome to the wonderful world of crontab. [Schedule Tasks on Linux Using Crontab](https://kvz.io/blog/2007/07/29/schedule-tasks-on-linux-using-crontab/)
+
+ * [cron](https://ru.wikipedia.org/wiki/Cron)
+ cron — классический демон (компьютерная программа в системах класса UNIX), использующийся для периодического выполнения заданий в определённое время. Регулярные действия описываются инструкциями, помещенными в файлы crontab и в специальные директории.
