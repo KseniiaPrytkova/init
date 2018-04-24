@@ -270,3 +270,17 @@ You can as well run a process directly from the background using the ampersand, 
 #### With the previous command, forbid all others.
 
 [How to block all ports except..](https://superuser.com/questions/769814/how-to-block-all-ports-except-80-443-with-iptables)
+
+## V.3 Scripting
+
+### 01
+#### Write a script which displays only the login, UID and Path of each entry of the /etc/passwd file.
+
+Traditionally, the /etc/passwd file is used to keep track of every registered user that has access to a system [Using the /etc/passwd file](https://www.ibm.com/support/knowledgecenter/en/ssw_aix_71/com.ibm.aix.security/passwords_etc_passwd_file.htm).
+
+The /etc/security/passwd file is an ASCII file that contains stanzas with password information. Each stanza is identified by a user name followed by a : (colon) and contains attributes in the form Attribute=Value. Each attribute is ended with a new line character, and each stanza is ended with an additional new line character.
+
+* [
+The Linux user login management (/etc/passwd and /etc/shadow files)](https://www.ibm.com/developerworks/community/blogs/58e72888-6340-46ac-b488-d31aa4058e9c/entry/the_linux_user_login_management_etc_passwd_and_etc_shadow_files19?lang=en)
+
+* [Understanding /etc/passwd File Format !!!](https://www.cyberciti.biz/faq/understanding-etcpasswd-file-format/)
