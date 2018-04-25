@@ -290,3 +290,13 @@ The Linux user login management (/etc/passwd and /etc/shadow files)](https://www
 
 ### 03
 #### Write a script which displays the list of files from the folder given as parameter, sorted by size.
+
+`$1/* meaning in the script:` it's the glob of the first argument considered as a directory. In bash scripts the arguments to a file are passed into the script as $0 ( which is the script name ), then $1, $2, $3 ... To access all of them you either use their label or you use one of the group constructs. For group constructs there are $* and $@. ($* considers all of the arguments as one block where as $@ considers them delimited by $IFS).
+
+$1 means the first parameter.
+for file in $1/* means loop with the variable file having the value of the name of each file in the directory named in the first parameter.
+
+[Grep](http://aidalinux.ru/w/Grep)
+
+### 05
+####  Write a script which displays 42.

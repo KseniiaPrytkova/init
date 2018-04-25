@@ -1,0 +1,1 @@
+ls -alS $1/* | grep ^- | awk '{print $5" "$9}'
