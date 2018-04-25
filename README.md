@@ -286,7 +286,31 @@ The Linux user login management (/etc/passwd and /etc/shadow files)](https://www
 * [Understanding /etc/passwd File Format !!!](https://www.cyberciti.biz/faq/understanding-etcpasswd-file-format/)
 
 ### 02
-#### 
+#### Write a script which updates all the package sources, then all the packages, and then logs everything in a file named /var/log/update_script.log. Create a scheduled task for this script, once per week at 4 AM.
+
+sudo apt-get update        # Fetches the list of available updates
+sudo apt-get upgrade       # Strictly upgrades the current packages
+sudo apt-get dist-upgrade  # Installs updates (new ones)
+Documentation about each apt-get option can be found in the the [man-pages for apt-get](http://manpages.ubuntu.com/manpages/xenial/en/man8/apt-get.8.html). These are also available by running man apt-get on your computer.
+
+* [How to install updates via command line?](https://askubuntu.com/questions/196768/how-to-install-updates-via-command-line)
+* [Schedule Tasks on Linux Using Crontab](https://kvz.io/blog/2007/07/29/schedule-tasks-on-linux-using-crontab/)
+* [Running a cron job at 2:30 AM everyday
+
+](https://stackoverflow.com/questions/14710257/running-a-cron-job-at-230-am-everyday)
+
+ 1cd #!/bin/bash
+
+`sudo touch /var/log/update_script.log
+sudo chmod 777 /var/log/update_script.log
+sudo touch /home/1
+sudo chmod 777 /home/1
+echo 'sudo apt-get update >> /var/log/update_script.log && sudo apt-get upgrade >> /var/log/update_script.log' > /home/1
+sudo touch /home/crontab_tmp
+sudo chmod 777 /home/crontab_tmp
+crontab -l > /home/crontab_tmp
+echo '0 4 * * 1 bash /home/1' >> /home/crontab_tmp
+crontab /home/crontab_tmp`
 
 ### 03
 #### Write a script which displays the list of files from the folder given as parameter, sorted by size.
