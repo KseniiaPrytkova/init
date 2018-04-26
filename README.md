@@ -298,6 +298,7 @@ Documentation about each apt-get option can be found in the the [man-pages for a
 * [Running a cron job at 2:30 AM everyday
 
 ](https://stackoverflow.com/questions/14710257/running-a-cron-job-at-230-am-everyday)
+* [15 отличных примеров для создания cron задач в Linux](http://devacademy.ru/posts/15-otlichnykh-primierov-dlia-sozdaniia-cron-zadach-v-linux/)
 
  1cd #!/bin/bash
 
@@ -321,6 +322,38 @@ $1 means the first parameter.
 for file in $1/* means loop with the variable file having the value of the name of each file in the directory named in the first parameter.
 
 [Grep](http://aidalinux.ru/w/Grep)
+
+### 04
+#### Write a script which monitors the modifications made to the /etc/crontab file and sends an e-mail to root if the file is modified. Create a scheduled task to run this script everyday at midnight.
+
+`sudo apt-get update
+sudo apt install mailutilssudo
+sudo apt-get install postfix
+sudo nano /etc/postfix/main.cf
+	- inet-interfaces => localhost
+sudo service postfix restart`
+.........
+
+sudo touch /home/file
+sudo chmod 777 /home/file
+script.sh > /home/file
+
+sudo touch /home/cron_sets
+sudo chmod 777 /home/cron_sets
+crontab -l > /home/cron_sets
+echo '0 0 * * * bash /home/check_sum' >> /home/cron_sets
+crontab /home/cron_sets
+sudo touch /home/cron_sum
+sudo chmod 777 /home/cron_sum
+sudo md5sum /etc/crontab | sed 's/ \/.*//' > /home/cron_sum
+.............
+
+
+`MD5 Sums` are 32 byte character strings that are the result of running the md5sum program against a particular file. Since it is very hard to find two different files that results in same strings, MD5's can be used to determine that the file or iso you downloaded is a bit-for-bit copy of the remote file or iso.
+
+* [Learn How to Generate and Verify Files with MD5 Checksum in Linux](https://www.tecmint.com/generate-verify-check-files-md5-checksum-linux/)
+* [HowToMD5SUM](https://help.ubuntu.com/community/HowToMD5SUM)
+* [Основы BASH. Часть 1](https://habr.com/post/47163/)
 
 ### 05
 ####  Write a script which displays 42.

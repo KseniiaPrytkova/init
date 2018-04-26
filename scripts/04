@@ -1,0 +1,16 @@
+#cat script.sh
+#!/bin/bash
+m1 = "$(md5sum '/etc/crontab' | cut -f1 -d' ')"
+m2 = "$(cat 'file')"
+
+if [ "$m1" != "$m2" ] ; then
+	md5sum /etc/crontab | cut -f1 -d' ' > file
+	echo "not ok" | mail -s "Cronfile was changed" root@localhost.com
+fi
+
+#this is for crontab file
+#sudo touch /home/cron_zaz
+#sudo chmod 777 /home/cron_zaz
+#crontab -l > /home/cron_zaz
+echo '0 0 * * * bash /home/check_sum' >> /home/cron_zaz
+crontab /home/cron_zaz
