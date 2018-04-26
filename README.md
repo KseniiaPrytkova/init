@@ -107,13 +107,15 @@ Traceroute is a utility that records the route (the specific gateway computers a
 #### Use the output of the previous command to find the name and IP address of the device that makes the link between you (local network) and the outside world `[>man traceroute]`
 
 this device is a server in my school
+[](https://ru.wikipedia.org/wiki/NAT)
 
 ### 12
 #### Check that the server with the 10.51.1.253 IP address is reachable from your computer. `[>man ping]`
 
 ### 13
-#### Check that the server with the 10.51.1.253 IP address is reachable from your computer. `[>man ]`
+#### Figure out the server type. `[>man ]`
 
+[] (https://ru.wikipedia.org/wiki/DHCP)
 13. man nslookup && google it: server type
 
 ### 14
@@ -128,7 +130,11 @@ this device is a server in my school
 
 ### 16
 #### Make the intra.42.fr address reroute to 46.19.122.85 `[>man ]`
+не знаем айпи интры? идем в днс сервер наш и ищем ф вайле ТОМ соответсвие нашего домена интра айпи/ если не находим там идем к след днс серверу(сначала смотрим в нашем компе)
 
+(в хост содерж айпи для кажд домена)
+
+если я не знаю айпи для своего имени мне надо проверять по разным днс и его искать!!
 16. google it: file hosts
 
 ## V.2 System
