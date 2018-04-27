@@ -17,7 +17,10 @@ The Linux user login management (/etc/passwd and /etc/shadow files)](https://www
 * [Understanding /etc/passwd File Format](https://www.cyberciti.biz/faq/understanding-etcpasswd-file-format/)
 
 ### 02
-#### `Write a script which updates all the package sources, then all the packages, and then logs everything in a file named /var/log/update_script.log. Create a scheduled task for this script, once per week at 4 AM.`
+
+```diff
+#### Write a script which updates all the package sources, then all the packages, and then logs everything in a file named /var/log/update_script.log. Create a scheduled task for this script, once per week at 4 AM.
+```
 
 ```
 sudo apt-get update        # Fetches the list of available updates
@@ -33,12 +36,12 @@ Documentation about each apt-get option can be found in the the [man-pages for a
 * [Running a cron job at 2:30 AM everyday](https://stackoverflow.com/questions/14710257/running-a-cron-job-at-230-am-everyday)
 * [15 отличных примеров для создания cron задач в Linux](http://devacademy.ru/posts/15-otlichnykh-primierov-dlia-sozdaniia-cron-zadach-v-linux/)
 
-Make sure your cron is acive. Run:
+Make sure your cron is active. Run:
 ```
 $ sudo crontab -e
 ```
 choose any redactor you like and modify cronfile (don't matter how), save it.
-Now you are ready to run this (in this case cron is going to work every second, just to see that is works)(`$ sh 02`):
+Now you are ready to run this (in this case cron is going to work every second, just to see that it is working)(`$ sh 02`):
 ```
 #!/bin/bash
 sudo touch /var/log/script02.log
