@@ -17,10 +17,7 @@ The Linux user login management (/etc/passwd and /etc/shadow files)](https://www
 * [Understanding /etc/passwd File Format](https://www.cyberciti.biz/faq/understanding-etcpasswd-file-format/)
 
 ### 02
-
-```diff
-#### Write a script which updates all the package sources, then all the packages, and then logs everything in a file named /var/log/update_script.log. Create a scheduled task for this script, once per week at 4 AM.
-```
+#### `Write a script which updates all the package sources, then all the packages, and then logs everything in a file named /var/log/update_script.log. Create a scheduled task for this script, once per week at 4 AM.`
 
 ```
 sudo apt-get update        # Fetches the list of available updates
@@ -63,7 +60,7 @@ Check your file_for_02, something "interesting" will appear there.
 `$1/* meaning in the script:` it's the glob of the first argument considered as a directory. In bash scripts the arguments to a file are passed into the script as $0 ( which is the script name ), then $1, $2, $3 ... To access all of them you either use their label or you use one of the group constructs. For group constructs there are $* and $@. ($* considers all of the arguments as one block where as $@ considers them delimited by $IFS).
 
 ### 04
-#### Write a script which monitors the modifications made to the /etc/crontab file and sends an e-mail to root if the file is modified. Create a scheduled task to run this script everyday at midnight.
+#### `Write a script which monitors the modifications made to the /etc/crontab file and sends an e-mail to root if the file is modified. Create a scheduled task to run this script everyday at midnight.`
 
 `MD5 Sums` are 32 byte character strings that are the result of running the md5sum program against a particular file. Since it is very hard to find two different files that results in same strings, MD5's can be used to determine that the file or iso you downloaded is a bit-for-bit copy of the remote file or iso.
 
