@@ -39,7 +39,7 @@ $ sudo crontab -e
 ```
 choose any redactor you like and modify cronfile (don't matter how), save it.
 Now you are ready to run this (in this case cron is going to work every second, just to see that it is working)(`$ sh 02`):
-```
+``` shell
 #!/bin/bash
 sudo touch /var/log/script02.log
 sudo chmod 777 /var/log/script02.log
@@ -68,7 +68,7 @@ Run this script using your email, change cronfile in /etc/crontab and you will g
 ```
 $ sh 02
 ```
-```
+``` shell
 #!/bin/bash
 sudo touch file
 sudo chmod 777 file
