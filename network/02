@@ -1,3 +1,4 @@
 ifconfig -L en0 | grep -w 'inet' | cut -d ' ' -f 2
+
 #OR (for more full info):
 ifconfig en0

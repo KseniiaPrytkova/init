@@ -95,25 +95,23 @@ ohhhh, it's Amazon!
 
 I have two IP addresses, an Internal IP address (Private) and an external IP address (Public). The `external IP address` or Public IP address is the IP address of the router interface that is connected to the Internet. `Internal Addresses` are also called Private addresses as they are restricted to private networks.
 
-[:rocket:](http://www.steves-internet-guide.com/internal-external-ip-addresses/)
+[Internal and External IP Addresses Explained](http://www.steves-internet-guide.com/internal-external-ip-addresses/)
 
 ### 10
 #### Identify the network devices between your computer and the slash16.org domain `[>man traceroute]`
 
-Traceroute is a utility that records the route (the specific gateway computers at each hop) through the Internet between your computer and a specified destination computer. It also calculates and displays the amount of time each hop took. Traceroute is a handy tool both for understanding where problems are in the Internet network and for getting a detailed sense of the Internet itself.
-
-[Канал связи](https://ru.wikipedia.org/wiki/Канал_связи)
+Traceroute is a utility that records the route (the specific gateway computers at each hop) through the Internet between your computer and a specified destination computer. It also calculates and displays the amount of time each hop took. Traceroute is a handy tool both for understanding where problems are in the Internet network and for getting a detailed sense of the Internet itself [[Канал связи](https://ru.wikipedia.org/wiki/Канал_связи).
 
 ### 11
 #### Use the output of the previous command to find the name and IP address of the device that makes the link between you (local network) and the outside world `[>man traceroute]`
 
 this device is a server in my school
-[NAT](https://ru.wikipedia.org/wiki/NAT)
+[[NAT]](https://ru.wikipedia.org/wiki/NAT)
 
 ### 12
 #### Check that the server with the 10.51.1.253 IP address is reachable from your computer. `[>man ping]`
 
-[ping](https://ru.wikipedia.org/wiki/Ping)
+[Read about ping](https://ru.wikipedia.org/wiki/Ping)
 
 ### 13
 #### Figure out the server type. `[>man nslookup]`
@@ -123,21 +121,13 @@ this device is a server in my school
 ### 14
 #### Use the Reverse DNS to find out the name of the server linked to the 10.51.1.81 IP address `[>man dig && >man host]`
 
-14. man dig && man host
-
 ### 15
-#### What file contains the local DNS entries? `[>man ]`
+#### What file contains the local DNS entries?
 
-15. google it: file hosts
+[google it: file hosts](https://ru.wikipedia.org/wiki/Hosts)
 
 ### 16
-#### Make the intra.42.fr address reroute to 46.19.122.85 `[>man ]`
-не знаем айпи интры? идем в днс сервер наш и ищем ф вайле ТОМ соответсвие нашего домена интра айпи/ если не находим там идем к след днс серверу(сначала смотрим в нашем компе)
-
-(в хост содерж айпи для кажд домена)
-
-если я не знаю айпи для своего имени мне надо проверять по разным днс и его искать!!
-16. google it: file hosts
+#### Make the intra.42.fr address reroute to 46.19.122.85
 
 ## V.2 System
 
