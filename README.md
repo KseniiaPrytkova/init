@@ -2,6 +2,235 @@
 The part 1 “Network” is done on school’s 42 Mac.  The part 2 and
 3, “System” and “Scripting” is done on a Debian virtual machine.
 
+## V.3 Scripting
+
+### 01
+#### Write a script which displays only the login, UID and Path of each entry of the /etc/passwd file.
+
+Traditionally, the /etc/passwd file is used to keep track of every registered user that has access to a system [Using the /etc/passwd file](https://www.ibm.com/support/knowledgecenter/en/ssw_aix_71/com.ibm.aix.security/passwords_etc_passwd_file.htm).
+
+The /etc/security/passwd file is an ASCII file that contains stanzas with password information. Each stanza is identified by a user name followed by a : (colon) and contains attributes in the form Attribute=Value. Each attribute is ended with a new line character, and each stanza is ended with an additional new line character.
+
+* [
+The Linux user login management (/etc/passwd and /etc/shadow files)](https://www.ibm.com/developerworks/community/blogs/58e72888-6340-46ac-b488-d31aa4058e9c/entry/the_linux_user_login_management_etc_passwd_and_etc_shadow_files19?lang=en)
+
+* [Understanding /etc/passwd File Format](https://www.cyberciti.biz/faq/understanding-etcpasswd-file-format/)
+
+### 02
+#### `Write a script which updates all the package sources, then all the packages, and then logs everything in a file named /var/log/update_script.log. Create a scheduled task for this script, once per week at 4 AM.`
+
+```
+sudo apt-get update        # Fetches the list of available updates
+sudo apt-get upgrade       # Strictly upgrades the current packages
+sudo apt-get dist-upgrade  # Installs updates (new ones)
+```
+Documentation about each apt-get option can be found in the the [man-pages for apt-get](http://manpages.ubuntu.com/manpages/xenial/en/man8/apt-get.8.html). These are also available by running man apt-get on your computer.
+
+
+
+* [How to install updates via command line?](https://askubuntu.com/questions/196768/how-to-install-updates-via-command-line)
+* [Schedule Tasks on Linux Using Crontab](https://kvz.io/blog/2007/07/29/schedule-tasks-on-linux-using-crontab/)
+* [Running a cron job at 2:30 AM everyday](https://stackoverflow.com/questions/14710257/running-a-cron-job-at-230-am-everyday)
+* [15 отличных примеров для создания cron задач в Linux](http://devacademy.ru/posts/15-otlichnykh-primierov-dlia-sozdaniia-cron-zadach-v-linux/)
+
+Make sure your cron is acive. Run:
+```
+$ sudo crontab -e
+```
+choose any redactor you like and modify cronfile (don't matter how), save it.
+Now you are ready to run this (in this case cron is going to work every second, just to see that is works)(`$ sh 02`):
+```
+#!/bin/bash
+sudo touch /var/log/script02.log
+sudo chmod 777 /var/log/script02.log
+sudo touch /home/file_for_02
+sudo chmod 777 /home/file_for_02
+sudo touch /home/cron_temp
+sudo chmod 777 /home/cron_temp
+echo 'sudo apt-get update >> /var/log/script02.log && sudo apt-get upgrade >> /var/log/script02.log' > /home/file_for_02
+crontab -l > /home/cron_temp
+echo '* * * * 1 bash /home/file_for_02' >> /home/cron_temp
+crontab /home/cron_temp
+```
+Check your file_for_02, something "interesting" will appear there.
+
+### 03
+#### Write a script which displays the list of files from the folder given as parameter, sorted by size.
+
+`$1/* meaning in the script:` it's the glob of the first argument considered as a directory. In bash scripts the arguments to a file are passed into the script as $0 ( which is the script name ), then $1, $2, $3 ... To access all of them you either use their label or you use one of the group constructs. For group constructs there are $* and $@. ($* considers all of the arguments as one block where as $@ considers them delimited by $IFS).
+
+### 04
+#### Write a script which monitors the modifications made to the /etc/crontab file and sends an e-mail to root if the file is modified. Create a scheduled task to run this script everyday at midnight.
+
+`MD5 Sums` are 32 byte character strings that are the result of running the md5sum program against a particular file. Since it is very hard to find two different files that results in same strings, MD5's can be used to determine that the file or iso you downloaded is a bit-for-bit copy of the remote file or iso.
+
+Run this script using your email, change cronfile in /etc/crontab and you will get a mail from cron, which is going to compare hashes every second:
+```
+$ sh 02
+```
+```
+#!/bin/bash
+sudo touch file
+sudo chmod 777 file
+sudo touch /home/script04
+Sudo chmod 777 /home/script04
+m1="$(md5sum '/etc/crontab' | cut -f1 -d' ')"
+m2="$(cat 'file')"
+
+if [ "$m1" != "$m2" ] ; then
+	md5sum /etc/crontab | cut -f1 -d' ' > file
+	echo "not ok" | mail -s "Cronfile was changed" mail@youremail.com
+fi
+
+sudo touch /home/cron_is_cron
+sudo chmod 777 /home/cron_is_cron
+crontab -l > /home/cron_is_cron
+echo '* * * * * bash /home/script04' >> /home/cron_is_cron
+crontab /home/cron_is_cron
+```
+
+* [Learn How to Generate and Verify Files with MD5 Checksum in Linux](https://www.tecmint.com/generate-verify-check-files-md5-checksum-linux/)
+* [HowToMD5SUM](https://help.ubuntu.com/community/HowToMD5SUM)
+* [Основы BASH. Часть 1](https://habr.com/post/47163/)
+
+### 05
+####  Write a script which displays 42.
+
+
+- ![#c5f015] `42 is the atomic mass of one of the naturally occurring stable isotopes of calcium.`
+
+
+## V.2 System
+
+First u should download Debian ISO image from [here](https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/). I used `debian-live-9.3.0-amd64-cinnamon.iso` version. Then run it on virtualizer, i used VirtualBox. (in case of my school everything should be done in /tmp folder, otherwise there will be problems with memory; also i ran ISO image from flash drive).
+
+### 01
+#### In what file can you find the installed version of your Debian?
+
+The answer is [here](https://linuxconfig.org/check-what-debian-version-you-are-running-on-your-linux-system).
+
+### 02
+#### What command can you use to rename your system?
+
+To find the current computer name type `$ hostname`. To change the name of the system u need to Become a root user: `sudo -s` or `su -`.
+
+[Debian Linux: Change Hostname / Computer Name Permanently](https://www.cyberciti.biz/faq/debian-change-hostname-permanently/)
+
+### 03
+#### What file has to be modified to make it permanent?
+
+Everything about it [Изменение hostname в Ubuntu / Debian](https://debianworld.ru/articles/izmenenie-hostname-v-ubuntu-debian/index.html).
+
+### 04
+#### What command gives you the time since your system was last booted?
+
+[Linux Find Out Last System Reboot Time and Date Command](https://www.cyberciti.biz/tips/linux-last-reboot-time-and-date-find-out.html)
+
+### 05
+#### Name the command that determines the state of the SSH service.
+
+SSH stands for Secure Shell and is `a cryptographic network protocol` for secure remote login and other secure network services over an insecure network [:mag:](https://wiki.debian.org/SSH). The best known example application is for remote login to computer systems by users.
+* [Secure Shell](https://en.wikipedia.org/wiki/Secure_Shell)
+* [SSH](http://help.ubuntu.ru/wiki/ssh)
+* [Enable SSH Server on Debian (How to Enable SSH Server for Remote Login on Debian 9)](https://linuxhint.com/enable-ssh-server-debian/)
+
+### 06
+#### Name the command that reboots the SSH service.
+
+Exhaustive answer is here: [:mag:](https://www.cyberciti.biz/faq/howto-start-stop-ssh-server/)
+
+[HowTo: Find Out My Linux Distribution Name and Version](https://www.cyberciti.biz/faq/find-linux-distribution-name-version-number/)
+
+### 07
+#### Figure out the PID of the SSHD service.
+
+`PID` - process ID of a running terminal program.
+
+`SSHD` is the [OpenSSH](https://ru.wikipedia.org/wiki/OpenSSH) server process. It listens to incoming connections using the SSH protocol and acts as the server for the protocol. It handles user authentication, encryption, terminal connections, file transfers, and tunneling.
+
+* [about SSHD process](https://www.ssh.com/ssh/sshd/)
+* [Магия SSH, Хабрахабр](https://habrahabr.ru/post/331348/)
+* [Getting PID of sshd](https://stackoverflow.com/questions/6867669/getting-pid-of-sshd)
+
+### 08
+#### What file contains the RSA keys that are authorized to connect via SSH?
+
+`RSA key` is a private key based on RSA algorithm [RSA is one of the first public-key cryptosystems and is widely used for secure data transmission.](https://ru.wikipedia.org/wiki/RSA). Private Key is used for authentication and a symmetric key exchange during establishment of an SSL/TLS session. [:mag:](https://www.namecheap.com/support/knowledgebase/article.aspx/798/67/what-is-an-rsa-key-used-for)
+
+[SSH Essentials: Working with SSH Servers, Clients, and Keys](https://www.digitalocean.com/community/tutorials/ssh-essentials-working-with-ssh-servers-clients-and-keys)
+
+### 09
+#### What command lets you know who is connected to the System?
+
+Here is the answer [:mag:](https://serverfault.com/questions/360296/see-all-logged-in-users-on-debian-server).
+
+* [4 Ways to Identify Who is Logged-In on Your Linux System](https://www.thegeekstuff.com/2009/03/4-ways-to-identify-who-is-logged-in-on-your-linux-system)
+* [Linux who command](https://www.computerhope.com/unix/uwho.htm)
+
+### 10
+#### Name the command that lists the partition tables of external devices?
+
+A partition ([GUID Partition Table](https://ru.wikipedia.org/wiki/Таблица_разделов_GUID)) is a fixed-size subset of a disk drive which is treated as a unit by the operating system.[1] A partition table is a table maintained on disk by the operating system describing the partitions on that disk. Partitions can be created, resized, or deleted. This is called disk partitioning. It is usually done during the installation of an operating system, however it is sometimes possible to make changes to the partitions even after the operating system has been installed.
+
+* [how to list all hard disks in linux from command line](http://www.lostsaloon.com/technology/how-to-list-disks-in-linux/)
+* [Linux View Hard Drive Partitions with fdisk and parted commands](https://www.cyberciti.biz/faq/linux-viewing-drive-partitions-with-fdisk-parted/)
+
+### 11
+#### Name the command that displays the available space left on the system?
+
+[Linux Check Disk Space Command](https://www.cyberciti.biz/faq/linux-check-disk-space-command/)
+
+### 12
+#### Figure out the exact size of each folder of /var.
+
+The command du "summarizes disk usage of each FILE, recursively for directories," e.g.: `du -hs /path/to/directory`.
+* `-h` is to get the numbers "human readable", e.g. get 140M instead of 143260 (size in KBytes);
+* `-s` is for summary (otherwise you'll get not only the size of the folder but also for everything in the folder separately).[:mag:](https://askubuntu.com/questions/1224/how-do-i-determine-the-total-size-of-a-directory-folder-from-the-command-line)
+
+### 13
+#### Name the command that find currently running processes. [ [>man ps](http://www.manpages.info/linux/ps.1.html)]
+
+[How to Manage Processes from the Linux Terminal: 10 Commands You Need to Know](https://www.howtogeek.com/107217/how-to-manage-processes-from-the-linux-terminal-10-commands-you-need-to-know/)
+
+### 14
+#### Run the ‘tail -f /var/log/syslog‘ command in background
+
+* [Understanding System Services with lnav](http://www.linux-magazine.com/Issues/2017/196/Tutorials-lnav)
+* [Лог файлы Linux по порядку, Хабрахабр](https://habrahabr.ru/post/332502/)
+
+You can as well run a process directly from the background using the ampersand, & sign.
+
+### 15
+#### Find the command that kills the background command’s process.
+
+[How to terminate a background process?](https://unix.stackexchange.com/questions/104821/how-to-terminate-a-background-process)
+
+### 16
+#### Find the service which makes it possible to run specific tasks following a regular schedule.
+
+ Linux has a great program for this called `cron`. It allows tasks to be automatically run in the background at regular intervals. You could also use it to automatically create backups, synchronize files, schedule updates, and much more. Welcome to the wonderful world of crontab. [Schedule Tasks on Linux Using Crontab](https://kvz.io/blog/2007/07/29/schedule-tasks-on-linux-using-crontab/)
+
+ [read about cron](https://ru.wikipedia.org/wiki/Cron)
+ 
+ ### 17
+ #### Find the command which gives the list of firewall rules.
+
+
+ Firewall (межсетевой экран, сетевой экран, брандмауэр) — огненная стена или попросту стена между вашим компьютером или сетью компьютеров и всемирной паутиной, то есть интернетом. Если говорить более подробно, то это целый комплекс программных или аппаратных средств, который предназначен осуществлять контроль входящего и исходящего трафика (сетевых пакетов) по установленным правилам.
+
+* [Firewall — что это такое и зачем он нужен?](http://www.oldnix.org/firewall-description/)
+* [DebianFirewall](https://wiki.debian.org/DebianFirewall)
+
+### 18
+#### With the previous command, authorize only IP addresses from 10.0.0.0/8 to connect to your system.
+
+[Iptables configuration - ssh connection only from a remote network](https://unix.stackexchange.com/questions/207110/iptables-configuration-ssh-connection-only-from-a-remote-network)
+
+### 19
+#### With the previous command, forbid all others.
+
+[How to block all ports except..](https://superuser.com/questions/769814/how-to-block-all-ports-except-80-443-with-iptables)
+
 ## V.1 Network
 
 ### 01
@@ -128,221 +357,3 @@ this device is a server in my school
 
 ### 16
 #### Make the intra.42.fr address reroute to 46.19.122.85
-
-## V.2 System
-
-First u should download Debian ISO image from [here](https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/). I used `debian-live-9.3.0-amd64-cinnamon.iso` version. Then run it on virtualizer, i used VirtualBox. (in case of my school everything should be done in /tmp folder, otherwise there will be problems with memory; also i ran ISO image from flash drive).
-
-### 01
-#### In what file can you find the installed version of your Debian?
-
-The answer is [here](https://linuxconfig.org/check-what-debian-version-you-are-running-on-your-linux-system).
-
-### 02
-#### What command can you use to rename your system?
-
-To find the current computer name type `$ hostname`. To change the name of the system u need to Become a root user: `sudo -s` or `su -`.
-
-[Debian Linux: Change Hostname / Computer Name Permanently](https://www.cyberciti.biz/faq/debian-change-hostname-permanently/)
-
-### 03
-#### What file has to be modified to make it permanent?
-
-Everything about it [Изменение hostname в Ubuntu / Debian](https://debianworld.ru/articles/izmenenie-hostname-v-ubuntu-debian/index.html).
-
-### 04
-#### What command gives you the time since your system was last booted?
-
-[Linux Find Out Last System Reboot Time and Date Command](https://www.cyberciti.biz/tips/linux-last-reboot-time-and-date-find-out.html)
-
-### 05
-#### Name the command that determines the state of the SSH service.
-
-SSH stands for Secure Shell and is `a cryptographic network protocol` for secure remote login and other secure network services over an insecure network [:mag:](https://wiki.debian.org/SSH). The best known example application is for remote login to computer systems by users.
-* [Secure Shell](https://en.wikipedia.org/wiki/Secure_Shell)
-* [SSH](http://help.ubuntu.ru/wiki/ssh)
-* [Enable SSH Server on Debian (How to Enable SSH Server for Remote Login on Debian 9)](https://linuxhint.com/enable-ssh-server-debian/)
-
-### 06
-#### Name the command that reboots the SSH service.
-
-Exhaustive answer is here: [:mag:](https://www.cyberciti.biz/faq/howto-start-stop-ssh-server/).
-
-[HowTo: Find Out My Linux Distribution Name and Version](https://www.cyberciti.biz/faq/find-linux-distribution-name-version-number/)
-
-### 07
-#### Figure out the PID of the SSHD service.
-
-`PID` - process ID of a running terminal program.
-
-`SSHD` is the [OpenSSH](https://ru.wikipedia.org/wiki/OpenSSH) server process. It listens to incoming connections using the SSH protocol and acts as the server for the protocol. It handles user authentication, encryption, terminal connections, file transfers, and tunneling.
-
-* [about SSHD process](https://www.ssh.com/ssh/sshd/)
-* [Магия SSH, Хабрахабр](https://habrahabr.ru/post/331348/)
-* [Getting PID of sshd](https://stackoverflow.com/questions/6867669/getting-pid-of-sshd)
-
-### 08
-#### What file contains the RSA keys that are authorized to connect via SSH?
-
-`RSA key` is a private key based on RSA algorithm [RSA is one of the first public-key cryptosystems and is widely used for secure data transmission.](https://ru.wikipedia.org/wiki/RSA). Private Key is used for authentication and a symmetric key exchange during establishment of an SSL/TLS session. [:mag:](https://www.namecheap.com/support/knowledgebase/article.aspx/798/67/what-is-an-rsa-key-used-for)
-
-[SSH Essentials: Working with SSH Servers, Clients, and Keys](https://www.digitalocean.com/community/tutorials/ssh-essentials-working-with-ssh-servers-clients-and-keys)
-
-### 09
-#### What command lets you know who is connected to the System?
-
-Here is the answer [:mag:](https://serverfault.com/questions/360296/see-all-logged-in-users-on-debian-server).
-
-* [4 Ways to Identify Who is Logged-In on Your Linux System](https://www.thegeekstuff.com/2009/03/4-ways-to-identify-who-is-logged-in-on-your-linux-system)
-* [Linux who command](https://www.computerhope.com/unix/uwho.htm)
-
-### 10
-#### Name the command that lists the partition tables of external devices?
-
-A partition ([GUID Partition Table](https://ru.wikipedia.org/wiki/Таблица_разделов_GUID)) is a fixed-size subset of a disk drive which is treated as a unit by the operating system.[1] A partition table is a table maintained on disk by the operating system describing the partitions on that disk. Partitions can be created, resized, or deleted. This is called disk partitioning. It is usually done during the installation of an operating system, however it is sometimes possible to make changes to the partitions even after the operating system has been installed.
-
-* [how to list all hard disks in linux from command line](http://www.lostsaloon.com/technology/how-to-list-disks-in-linux/)
-* [Linux View Hard Drive Partitions with fdisk and parted commands](https://www.cyberciti.biz/faq/linux-viewing-drive-partitions-with-fdisk-parted/)
-
-### 11
-#### Name the command that displays the available space left on the system?
-
-[Linux Check Disk Space Command](https://www.cyberciti.biz/faq/linux-check-disk-space-command/)
-
-### 12
-#### Figure out the exact size of each folder of /var.
-
-The command du "summarizes disk usage of each FILE, recursively for directories," e.g.: `du -hs /path/to/directory`.
-* `-h` is to get the numbers "human readable", e.g. get 140M instead of 143260 (size in KBytes);
-* `-s` is for summary (otherwise you'll get not only the size of the folder but also for everything in the folder separately).[:mag:](https://askubuntu.com/questions/1224/how-do-i-determine-the-total-size-of-a-directory-folder-from-the-command-line)
-
-### 13
-#### Name the command that find currently running processes. [ [>man ps](http://www.manpages.info/linux/ps.1.html)]
-
-[How to Manage Processes from the Linux Terminal: 10 Commands You Need to Know](https://www.howtogeek.com/107217/how-to-manage-processes-from-the-linux-terminal-10-commands-you-need-to-know/)
-
-### 14
-#### Run the ‘tail -f /var/log/syslog‘ command in background
-
-* [Understanding System Services with lnav](http://www.linux-magazine.com/Issues/2017/196/Tutorials-lnav)
-* [Лог файлы Linux по порядку, Хабрахабр](https://habrahabr.ru/post/332502/)
-
-You can as well run a process directly from the background using the ampersand, & sign.
-
-### 15
-#### Find the command that kills the background command’s process.
-
-[How to terminate a background process?](https://unix.stackexchange.com/questions/104821/how-to-terminate-a-background-process)
-
-### 16
-#### Find the service which makes it possible to run specific tasks following a regular schedule.
-
- Linux has a great program for this called `cron`. It allows tasks to be automatically run in the background at regular intervals. You could also use it to automatically create backups, synchronize files, schedule updates, and much more. Welcome to the wonderful world of crontab. [Schedule Tasks on Linux Using Crontab](https://kvz.io/blog/2007/07/29/schedule-tasks-on-linux-using-crontab/)
-
- [read about cron](https://ru.wikipedia.org/wiki/Cron)
- 
- ### 17
- #### Find the command which gives the list of firewall rules.
-
-
- Firewall (межсетевой экран, сетевой экран, брандмауэр) — огненная стена или попросту стена между вашим компьютером или сетью компьютеров и всемирной паутиной, то есть интернетом. Если говорить более подробно, то это целый комплекс программных или аппаратных средств, который предназначен осуществлять контроль входящего и исходящего трафика (сетевых пакетов) по установленным правилам.
-
-* [Firewall — что это такое и зачем он нужен?](http://www.oldnix.org/firewall-description/)
-* [DebianFirewall](https://wiki.debian.org/DebianFirewall)
-
-### 18
-#### With the previous command, authorize only IP addresses from 10.0.0.0/8 to connect to your system.
-
-[Iptables configuration - ssh connection only from a remote network](https://unix.stackexchange.com/questions/207110/iptables-configuration-ssh-connection-only-from-a-remote-network)
-
-### 19
-#### With the previous command, forbid all others.
-
-[How to block all ports except..](https://superuser.com/questions/769814/how-to-block-all-ports-except-80-443-with-iptables)
-
-## V.3 Scripting
-
-### 01
-#### Write a script which displays only the login, UID and Path of each entry of the /etc/passwd file.
-
-Traditionally, the /etc/passwd file is used to keep track of every registered user that has access to a system [Using the /etc/passwd file](https://www.ibm.com/support/knowledgecenter/en/ssw_aix_71/com.ibm.aix.security/passwords_etc_passwd_file.htm).
-
-The /etc/security/passwd file is an ASCII file that contains stanzas with password information. Each stanza is identified by a user name followed by a : (colon) and contains attributes in the form Attribute=Value. Each attribute is ended with a new line character, and each stanza is ended with an additional new line character.
-
-* [
-The Linux user login management (/etc/passwd and /etc/shadow files)](https://www.ibm.com/developerworks/community/blogs/58e72888-6340-46ac-b488-d31aa4058e9c/entry/the_linux_user_login_management_etc_passwd_and_etc_shadow_files19?lang=en)
-
-* [Understanding /etc/passwd File Format !!!](https://www.cyberciti.biz/faq/understanding-etcpasswd-file-format/)
-
-### 02
-#### Write a script which updates all the package sources, then all the packages, and then logs everything in a file named /var/log/update_script.log. Create a scheduled task for this script, once per week at 4 AM.
-
-sudo apt-get update        # Fetches the list of available updates
-sudo apt-get upgrade       # Strictly upgrades the current packages
-sudo apt-get dist-upgrade  # Installs updates (new ones)
-Documentation about each apt-get option can be found in the the [man-pages for apt-get](http://manpages.ubuntu.com/manpages/xenial/en/man8/apt-get.8.html). These are also available by running man apt-get on your computer.
-
-* [How to install updates via command line?](https://askubuntu.com/questions/196768/how-to-install-updates-via-command-line)
-* [Schedule Tasks on Linux Using Crontab](https://kvz.io/blog/2007/07/29/schedule-tasks-on-linux-using-crontab/)
-* [Running a cron job at 2:30 AM everyday
-
-](https://stackoverflow.com/questions/14710257/running-a-cron-job-at-230-am-everyday)
-* [15 отличных примеров для создания cron задач в Linux](http://devacademy.ru/posts/15-otlichnykh-primierov-dlia-sozdaniia-cron-zadach-v-linux/)
-
- 1cd #!/bin/bash
-
-`sudo touch /var/log/update_script.log
-sudo chmod 777 /var/log/update_script.log
-sudo touch /home/1
-sudo chmod 777 /home/1
-echo 'sudo apt-get update >> /var/log/update_script.log && sudo apt-get upgrade >> /var/log/update_script.log' > /home/1
-sudo touch /home/crontab_tmp
-sudo chmod 777 /home/crontab_tmp
-crontab -l > /home/crontab_tmp
-echo '0 4 * * 1 bash /home/1' >> /home/crontab_tmp
-crontab /home/crontab_tmp`
-
-### 03
-#### Write a script which displays the list of files from the folder given as parameter, sorted by size.
-
-`$1/* meaning in the script:` it's the glob of the first argument considered as a directory. In bash scripts the arguments to a file are passed into the script as $0 ( which is the script name ), then $1, $2, $3 ... To access all of them you either use their label or you use one of the group constructs. For group constructs there are $* and $@. ($* considers all of the arguments as one block where as $@ considers them delimited by $IFS).
-
-$1 means the first parameter.
-for file in $1/* means loop with the variable file having the value of the name of each file in the directory named in the first parameter.
-
-[Grep](http://aidalinux.ru/w/Grep)
-
-### 04
-#### Write a script which monitors the modifications made to the /etc/crontab file and sends an e-mail to root if the file is modified. Create a scheduled task to run this script everyday at midnight.
-
-`sudo apt-get update
-sudo apt install mailutilssudo
-sudo apt-get install postfix
-sudo nano /etc/postfix/main.cf
-	- inet-interfaces => localhost
-sudo service postfix restart`
-.........
-
-sudo touch /home/file
-sudo chmod 777 /home/file
-script.sh > /home/file
-
-sudo touch /home/cron_sets
-sudo chmod 777 /home/cron_sets
-crontab -l > /home/cron_sets
-echo '0 0 * * * bash /home/check_sum' >> /home/cron_sets
-crontab /home/cron_sets
-sudo touch /home/cron_sum
-sudo chmod 777 /home/cron_sum
-sudo md5sum /etc/crontab | sed 's/ \/.*//' > /home/cron_sum
-.............
-
-
-`MD5 Sums` are 32 byte character strings that are the result of running the md5sum program against a particular file. Since it is very hard to find two different files that results in same strings, MD5's can be used to determine that the file or iso you downloaded is a bit-for-bit copy of the remote file or iso.
-
-* [Learn How to Generate and Verify Files with MD5 Checksum in Linux](https://www.tecmint.com/generate-verify-check-files-md5-checksum-linux/)
-* [HowToMD5SUM](https://help.ubuntu.com/community/HowToMD5SUM)
-* [Основы BASH. Часть 1](https://habr.com/post/47163/)
-
-### 05
-####  Write a script which displays 42.
