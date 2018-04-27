@@ -1,13 +1,14 @@
-# This is script that executes each period of time (we can put it anywhere we want, we just need the path):
-sudo apt-get update >> /var/log/update_script.log && sudo apt-get upgrade >> /var/log/update_script.log
-# echo 'sudo apt-get update >> /var/log/update_script.log && sudo apt-get upgrade >> /var/log/update_script.log' > /myfolder/myscript
-
-# And this is what crontab needs:
-0 4 * * 1 bash /myfolder/myscript
-# so after u create some crontab_tmp file u can write:
-# echo '0 4 * * 1 bash /home/1' >> /home/crontab_tmp
-# and then
-# crontab /home/crontab_tmp
+#!/bin/bash
+sudo touch /var/log/script02.log
+sudo chmod 777 /var/log/script02.log
+sudo touch /home/file_for_02
+sudo chmod 777 /home/file_for_02
+sudo touch /home/cron_temp
+sudo chmod 777 /home/cron_temp
+echo 'sudo apt-get update >> /var/log/script02.log && sudo apt-get upgrade >> /var/log/script02.log' > /home/file_for_02
+crontab -l > /home/cron_temp
+echo '0 4 * * 1 bash /home/file_for_02' >> /home/cron_temp
+crontab /home/cron_temp
 
 # ALSO! If u want crontab sendinding you notices to email crontab file must contain (* * * * * means every minute):
 # * * * * * bash /myfolder/myscript | mail -s "Hello!" emailme@mail.com

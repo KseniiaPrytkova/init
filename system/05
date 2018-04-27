@@ -2,3 +2,7 @@ sudo systemctl status ssh
 
 # for systemd based Ubuntu Linux 16.04 LTS or above server, it works like
 # < sudo service ssh status
+
+# U should install ssh first
+# $ sudo apt-get update
+$ sudo apt-get install openssh-server

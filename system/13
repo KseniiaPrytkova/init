@@ -1,6 +1,7 @@
 top
 
 # OR:
+$ sudo apt-get install htop
 $ htop
 
 #OR:
