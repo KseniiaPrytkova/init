@@ -96,12 +96,8 @@ crontab /home/cron_is_cron
 ### 05
 ####  Write a script which displays 42.
 
-
-- ![#c5f015] `42 is the atomic mass of one of the naturally occurring stable isotopes of calcium.`
-
 ```diff
-+ this will be highlighted in green
-- this will be highlighted in red
+42 is the atomic mass of one of the naturally occurring stable isotopes of calcium.
 ```
 
 ## V.2 System
