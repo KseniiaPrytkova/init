@@ -100,7 +100,7 @@ I have two IP addresses, an Internal IP address (Private) and an external IP add
 ### 10
 #### Identify the network devices between your computer and the slash16.org domain `[>man traceroute]`
 
-Traceroute is a utility that records the route (the specific gateway computers at each hop) through the Internet between your computer and a specified destination computer. It also calculates and displays the amount of time each hop took. Traceroute is a handy tool both for understanding where problems are in the Internet network and for getting a detailed sense of the Internet itself [[Канал связи](https://ru.wikipedia.org/wiki/Канал_связи).
+Traceroute is a utility that records the route (the specific gateway computers at each hop) through the Internet between your computer and a specified destination computer. It also calculates and displays the amount of time each hop took. Traceroute is a handy tool both for understanding where problems are in the Internet network and for getting a detailed sense of the Internet itself [[Канал связи]](https://ru.wikipedia.org/wiki/Канал_связи).
 
 ### 11
 #### Use the output of the previous command to find the name and IP address of the device that makes the link between you (local network) and the outside world `[>man traceroute]`
