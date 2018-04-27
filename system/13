@@ -1,8 +1,8 @@
 top
 
 # OR:
-$ sudo apt-get install htop
-$ htop
+# $ sudo apt-get install htop
+# $ htop
 
-#OR:
-$ ps -aux
+# OR:
+# $ ps -aux

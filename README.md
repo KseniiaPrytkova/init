@@ -141,32 +141,34 @@ The answer is [here](https://linuxconfig.org/check-what-debian-version-you-are-r
 ### 02
 #### What command can you use to rename your system?
 
-To find the current computer name type `$ hostname`. To change the name of the system u need to Become a root user: `sudo -s` or `su -`.[:mag:](https://www.cyberciti.biz/faq/debian-change-hostname-permanently/)
+To find the current computer name type `$ hostname`. To change the name of the system u need to Become a root user: `sudo -s` or `su -`.
+
+[Debian Linux: Change Hostname / Computer Name Permanently](https://www.cyberciti.biz/faq/debian-change-hostname-permanently/)
 
 ### 03
 #### What file has to be modified to make it permanent?
 
-Everything about it [:mag:](https://debianworld.ru/articles/izmenenie-hostname-v-ubuntu-debian/index.html).
+Everything about it [Изменение hostname в Ubuntu / Debian](https://debianworld.ru/articles/izmenenie-hostname-v-ubuntu-debian/index.html).
 
 ### 04
 #### What command gives you the time since your system was last booted?
 
-[:mag:](https://www.cyberciti.biz/tips/linux-last-reboot-time-and-date-find-out.html) - Linux Find Out Last System Reboot Time and Date Command
+[Linux Find Out Last System Reboot Time and Date Command](https://www.cyberciti.biz/tips/linux-last-reboot-time-and-date-find-out.html)
 
 ### 05
 #### Name the command that determines the state of the SSH service.
 
 SSH stands for Secure Shell and is `a cryptographic network protocol` for secure remote login and other secure network services over an insecure network [:mag:](https://wiki.debian.org/SSH). The best known example application is for remote login to computer systems by users.
-* [:mag:](https://en.wikipedia.org/wiki/Secure_Shell) - Secure Shell
-* [:mag:](http://help.ubuntu.ru/wiki/ssh) - SSH
-* [:mag:](https://linuxhint.com/enable-ssh-server-debian/) - Enable SSH Server on Debian (How to Enable SSH Server for Remote Login on Debian 9).
+* [Secure Shell](https://en.wikipedia.org/wiki/Secure_Shell)
+* [SSH](http://help.ubuntu.ru/wiki/ssh)
+* [Enable SSH Server on Debian (How to Enable SSH Server for Remote Login on Debian 9)](https://linuxhint.com/enable-ssh-server-debian/)
 
 ### 06
 #### Name the command that reboots the SSH service.
 
 Exhaustive answer is here: [:mag:](https://www.cyberciti.biz/faq/howto-start-stop-ssh-server/).
 
-[:mag:](https://www.cyberciti.biz/faq/find-linux-distribution-name-version-number/) - HowTo: Find Out My Linux Distribution Name and Version
+[HowTo: Find Out My Linux Distribution Name and Version](https://www.cyberciti.biz/faq/find-linux-distribution-name-version-number/)
 
 ### 07
 #### Figure out the PID of the SSHD service.
@@ -175,37 +177,37 @@ Exhaustive answer is here: [:mag:](https://www.cyberciti.biz/faq/howto-start-sto
 
 `SSHD` is the [OpenSSH](https://ru.wikipedia.org/wiki/OpenSSH) server process. It listens to incoming connections using the SSH protocol and acts as the server for the protocol. It handles user authentication, encryption, terminal connections, file transfers, and tunneling.
 
-* [:mag:](https://www.ssh.com/ssh/sshd/) - about SSHD process.
-* [:mag:](https://habrahabr.ru/post/331348/) - Магия SSH, Хабрахабр
-* [:mag:](https://stackoverflow.com/questions/6867669/getting-pid-of-sshd) - Getting PID of sshd
+* [about SSHD process](https://www.ssh.com/ssh/sshd/)
+* [Магия SSH, Хабрахабр](https://habrahabr.ru/post/331348/)
+* [Getting PID of sshd](https://stackoverflow.com/questions/6867669/getting-pid-of-sshd)
 
 ### 08
 #### What file contains the RSA keys that are authorized to connect via SSH?
 
 `RSA key` is a private key based on RSA algorithm [RSA is one of the first public-key cryptosystems and is widely used for secure data transmission.](https://ru.wikipedia.org/wiki/RSA). Private Key is used for authentication and a symmetric key exchange during establishment of an SSL/TLS session. [:mag:](https://www.namecheap.com/support/knowledgebase/article.aspx/798/67/what-is-an-rsa-key-used-for)
 
-[:mag:](https://www.digitalocean.com/community/tutorials/ssh-essentials-working-with-ssh-servers-clients-and-keys) - SSH Essentials: Working with SSH Servers, Clients, and Keys
+[SSH Essentials: Working with SSH Servers, Clients, and Keys](https://www.digitalocean.com/community/tutorials/ssh-essentials-working-with-ssh-servers-clients-and-keys)
 
 ### 09
 #### What command lets you know who is connected to the System?
 
 Here is the answer [:mag:](https://serverfault.com/questions/360296/see-all-logged-in-users-on-debian-server).
 
-* [:mag:](https://www.thegeekstuff.com/2009/03/4-ways-to-identify-who-is-logged-in-on-your-linux-system) - 4 Ways to Identify Who is Logged-In on Your Linux System
-* [:mag:](https://www.computerhope.com/unix/uwho.htm) - Linux who command
+* [4 Ways to Identify Who is Logged-In on Your Linux System](https://www.thegeekstuff.com/2009/03/4-ways-to-identify-who-is-logged-in-on-your-linux-system)
+* [Linux who command](https://www.computerhope.com/unix/uwho.htm)
 
 ### 10
 #### Name the command that lists the partition tables of external devices?
 
 A partition ([GUID Partition Table](https://ru.wikipedia.org/wiki/Таблица_разделов_GUID)) is a fixed-size subset of a disk drive which is treated as a unit by the operating system.[1] A partition table is a table maintained on disk by the operating system describing the partitions on that disk. Partitions can be created, resized, or deleted. This is called disk partitioning. It is usually done during the installation of an operating system, however it is sometimes possible to make changes to the partitions even after the operating system has been installed.
 
-* [:mag:](http://www.lostsaloon.com/technology/how-to-list-disks-in-linux/) - how to list all hard disks in linux from command line
-* [:mag:](https://www.cyberciti.biz/faq/linux-viewing-drive-partitions-with-fdisk-parted/) - Linux View Hard Drive Partitions with fdisk and parted commands
+* [how to list all hard disks in linux from command line](http://www.lostsaloon.com/technology/how-to-list-disks-in-linux/)
+* [Linux View Hard Drive Partitions with fdisk and parted commands](https://www.cyberciti.biz/faq/linux-viewing-drive-partitions-with-fdisk-parted/)
 
 ### 11
 #### Name the command that displays the available space left on the system?
 
-[Linux Check Disk Space Command](https://www.cyberciti.biz/faq/linux-check-disk-space-command/).
+[Linux Check Disk Space Command](https://www.cyberciti.biz/faq/linux-check-disk-space-command/)
 
 ### 12
 #### Figure out the exact size of each folder of /var.
@@ -225,17 +227,7 @@ The command du "summarizes disk usage of each FILE, recursively for directories,
 * [Understanding System Services with lnav](http://www.linux-magazine.com/Issues/2017/196/Tutorials-lnav)
 * [Лог файлы Linux по порядку, Хабрахабр](https://habrahabr.ru/post/332502/)
 
-You can as well run a process directly from the background using the ampersand, & sign.!!!
-
-Задания могут быть либо на переднем плане (foreground), либо фоновыми (background). На переднем плане в любой момент времени может быть только одно задание. Задание на переднем плане — это то задание, с которым вы взаимодействуете; оно получает ввод с клавиатуры и посылает вывод на экран (если, разумеется, вы не перенаправили ввод или вывод куда-либо ещё). Напротив, фоновые задания не получают ввода с терминала; как правило, такие задания не нуждаются во взаимодействии с пользователем.
-Некоторые задания исполняются очень долго, и во время их работы не происходит ничего интересного. Пример таких заданий — компилирование программ, а также сжатие больших файлов. Нет никаких причин смотреть на экран и ждать, когда эти задания выполнятся. Такие задания следует запускать в фоновом режиме. В это время вы можете работать с другими программами.
-
-Нормальные [?] операционные системы ведут подробный протокол собственных действий, записывая всё происходящее в текстовые файлы, log-файлы, `лог-файлы` или логи. Это обычные текстовые файлы, которые можно прочесть любым текстовым редактором (или средствами самой операционной системы), хотя многие логи доступны на чтение только пользователю root.
-Главное: по логам можно восстановить почти полную картину неполадки, попутно выяснив особенности вашего железа и степени его поддержки. 
-
-`Де́мон` (daemon, dæmon, др.-греч. δαίμων божество) — компьютерная программа в системах класса UNIX, запускаемая самой системой и работающая в фоновом режиме без прямого взаимодействия с пользователем.
-
-Демоны обычно запускаются во время загрузки системы. Типичные задачи демонов: серверы сетевых протоколов (HTTP, FTP, электронная почта и др.), управление оборудованием, поддержка очередей печати, управление выполнением заданий по расписанию и т.д. В техническом смысле демоном считается процесс, который не имеет управляющего терминала. Чаще всего (но не обязательно) предком демона является init — корневой процесс UNIX. Традиционно названия демон-процессов заканчиваются на букву d, чтобы показать, что этот процесс является демоном, и для различия нормальной компьютерной программы и демона.
+You can as well run a process directly from the background using the ampersand, & sign.
 
 ### 15
 #### Find the command that kills the background command’s process.
@@ -247,22 +239,21 @@ You can as well run a process directly from the background using the ampersand, 
 
  Linux has a great program for this called `cron`. It allows tasks to be automatically run in the background at regular intervals. You could also use it to automatically create backups, synchronize files, schedule updates, and much more. Welcome to the wonderful world of crontab. [Schedule Tasks on Linux Using Crontab](https://kvz.io/blog/2007/07/29/schedule-tasks-on-linux-using-crontab/)
 
- * [cron](https://ru.wikipedia.org/wiki/Cron)
- cron — классический демон (компьютерная программа в системах класса UNIX), использующийся для периодического выполнения заданий в определённое время. Регулярные действия описываются инструкциями, помещенными в файлы crontab и в специальные директории.
-
+ [read about cron](https://ru.wikipedia.org/wiki/Cron)
+ 
  ### 17
  #### Find the command which gives the list of firewall rules.
 
 
  Firewall (межсетевой экран, сетевой экран, брандмауэр) — огненная стена или попросту стена между вашим компьютером или сетью компьютеров и всемирной паутиной, то есть интернетом. Если говорить более подробно, то это целый комплекс программных или аппаратных средств, который предназначен осуществлять контроль входящего и исходящего трафика (сетевых пакетов) по установленным правилам.
 
-* [firewall — что это такое и зачем он нужен?](http://www.oldnix.org/firewall-description/)
+* [Firewall — что это такое и зачем он нужен?](http://www.oldnix.org/firewall-description/)
 * [DebianFirewall](https://wiki.debian.org/DebianFirewall)
 
 ### 18
 #### With the previous command, authorize only IP addresses from 10.0.0.0/8 to connect to your system.
 
-[iptables configuration - ssh connection only from a remote network](https://unix.stackexchange.com/questions/207110/iptables-configuration-ssh-connection-only-from-a-remote-network)
+[Iptables configuration - ssh connection only from a remote network](https://unix.stackexchange.com/questions/207110/iptables-configuration-ssh-connection-only-from-a-remote-network)
 
 ### 19
 #### With the previous command, forbid all others.
