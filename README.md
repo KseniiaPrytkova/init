@@ -162,7 +162,7 @@ Exhaustive answer is here: [:mag:](https://www.cyberciti.biz/faq/howto-start-sto
 ### 09
 #### What command lets you know who is connected to the System?
 
-Here is the answer [:mag:](https://serverfault.com/questions/360296/see-all-logged-in-users-on-debian-server).
+Here is the answer [:mag:](https://serverfault.com/questions/360296/see-all-logged-in-users-on-debian-server)
 
 * [4 Ways to Identify Who is Logged-In on Your Linux System](https://www.thegeekstuff.com/2009/03/4-ways-to-identify-who-is-logged-in-on-your-linux-system)
 * [Linux who command](https://www.computerhope.com/unix/uwho.htm)
@@ -185,7 +185,7 @@ A partition ([GUID Partition Table](https://ru.wikipedia.org/wiki/Таблица
 
 The command du "summarizes disk usage of each FILE, recursively for directories," e.g.: `du -hs /path/to/directory`.
 * `-h` is to get the numbers "human readable", e.g. get 140M instead of 143260 (size in KBytes);
-* `-s` is for summary (otherwise you'll get not only the size of the folder but also for everything in the folder separately).[:mag:](https://askubuntu.com/questions/1224/how-do-i-determine-the-total-size-of-a-directory-folder-from-the-command-line)
+* `-s` is for summary (otherwise you'll get not only the size of the folder but also for everything in the folder separately)[:mag:](https://askubuntu.com/questions/1224/how-do-i-determine-the-total-size-of-a-directory-folder-from-the-command-line)
 
 ### 13
 #### Name the command that find currently running processes. [ [>man ps](http://www.manpages.info/linux/ps.1.html)]
